@@ -1,8 +1,6 @@
 package com.example.CT007;
-
 import com.example.CT001.SensorBiometrico;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SistemaMonitoramentoAvancadoTest {
@@ -33,10 +31,9 @@ public class SistemaMonitoramentoAvancadoTest {
     @Test
     public void testValidacaoDadosInvalidos() {
         SistemaMonitoramentoAvancado sistema = new SistemaMonitoramentoAvancado();
-
         SensorBiometrico oximetro = new Oximetro();
+        
         sistema.conectarSensor(oximetro);
-
         // Dados inválidos
         sistema.atualizarDadosEmTempoReal(oximetro, 60.0);
         assertEquals(60.0, sistema.getDadoSensor("Oxímetro"));
@@ -45,10 +42,9 @@ public class SistemaMonitoramentoAvancadoTest {
     @Test
     public void testSensorInativo() {
         SistemaMonitoramentoAvancado sistema = new SistemaMonitoramentoAvancado();
-
         SensorBiometrico oximetro = new Oximetro();
+        
         sistema.conectarSensor(oximetro);
-
         // Sensor inativo
         sistema.verificarSensoresInativos();
     }
