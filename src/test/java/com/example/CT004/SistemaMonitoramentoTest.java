@@ -1,10 +1,7 @@
 package com.example.CT004;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import org.junit.jupiter.api.Test;
-
 import com.example.CT001.SensorBiometrico;
 import com.example.CT001.SistemaMonitoramento;
 
@@ -38,5 +35,4 @@ public class SistemaMonitoramentoTest {
         assertEquals(83.0, sistema.getDadoSensor("Frequência Cardíaca"));
         assertEquals(95.0, sistema.getDadoSensor("Saturação de Oxigênio"));
     }
-    
 }
