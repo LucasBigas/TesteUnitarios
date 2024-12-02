@@ -7,7 +7,6 @@ public class SistemaMonitoramentoAvancadoTest {
     @Test
     public void testIntegracaoSensores() {
         SistemaMonitoramentoAvancado sistema = new SistemaMonitoramentoAvancado();
-
         // Conectar diferentes sensores
         SensorBiometrico oximetro = new Oximetro();
         SensorBiometrico termometro = new Termometro();
